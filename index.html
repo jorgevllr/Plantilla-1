@@ -1,44 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Artículo informativo sobre un tema de actualidad">
-    <link rel="stylesheet" href="styles.css" />
-    <title>Nombre del Artículo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><!-- TÍTULO DE LA PÁGINA --></title>
+
+  <!-- Fuentes y estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animaciones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous"/>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="hero">
-        <div class="hero-overlay">
-            <h1 class="title">Nombre del Artículo</h1>
-            <p class="subtitle">Una breve introducción o subtítulo atractivo</p>
+
+  <!-- NAVBAR -->
+  <header class="navbar horizontal">
+    <div class="nav-container">
+      <a class="logo" href="index.html"><!-- LOGO / NOMBRE DEL BLOG --></a>
+      <nav class="nav-links horizontal">
+        <a href="index.html">Inicio</a>
+        <a href="#seccion1">Sección 1</a>
+        <a href="#seccion2">Sección 2</a>
+
+        <div class="dropdown">
+          <a href="#temas" class="dropdown-toggle" onclick="toggleDropdown(event)">Temas ▾</a>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <!-- Enlaces a subpáginas -->
+            <a href="tema1.html">Tema 1</a>
+            <a href="tema2.html">Tema 2</a>
+            <a href="tema3.html">Tema 3</a>
+          </div>
         </div>
-    </header>
+      </nav>
+    </div>
+  </header>
 
-    <nav class="menu">
-        <ul>
-            <li><a href="tema1.html">Tema 1</a></li>
-            <li><a href="tema2.html">Tema 2</a></li>
-            <li><a href="tema3.html">Tema 3</a></li>
-            <li><a href="tema4.html">Tema 4</a></li>
-            <li><a href="tema5.html">Tema 5</a></li>
-        </ul>
-    </nav>
+  <!-- HERO -->
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1><!-- TÍTULO PRINCIPAL --></h1>
+        <p><!-- Descripción o subtítulo del artículo --></p>
+      </div>
+      <div class="hero-image">
+        <img src="<!-- URL DE LA IMAGEN -->" alt="<!-- Descripción -->">
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <section class="intro section-fade">
-            <h2 class="section-title">Introducción</h2>
-            <p>Este artículo trata sobre los mejores ejemplos relacionados con [tema específico]. Aquí te presentamos una visión general antes de entrar en cada punto clave.</p>
-        </section>
+  <!-- SECCIÓN 1 -->
+  <section id="seccion1" class="info-section" data-aos="fade-up">
+    <h2><!-- Título de la sección 1 --></h2>
+    <p><!-- Primer párrafo explicativo --></p>
+    <p><!-- Segundo párrafo explicativo --></p>
+  </section>
 
-        <section class="topic section-fade">
-            <h2 class="section-title">Tema Destacado 1</h2>
-            <p>Descripción general del primer tema destacado. Breve explicación con enfoque claro.</p>
-            <a href="tema1.html" class="button">Más información</a>
-        </section>
-        <!-- Duplica más secciones como esta para los otros temas -->
-    </main>
+  <!-- SECCIÓN 2 -->
+  <section id="seccion2" class="info-section" data-aos="fade-up">
+    <h2><!-- Título de la sección 2 --></h2>
+    <p><!-- Introducción de los temas explicados --></p>
 
-    <script src="script.js"></script>
+    <div class="tipo-grid">
+      <!-- Tarjetas de contenido -->
+      <div class="tipo-card" data-aos="fade-up" data-aos-delay="100">
+        <h3><!-- Título breve del tema --></h3>
+        <p><!-- Breve descripción del tema --></p>
+      </div>
+      <!-- Puedes duplicar este bloque hasta 5 veces -->
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE ENLACES A SUBPÁGINAS -->
+  <section id="temas" class="info-section" data-aos="fade-up">
+    <h2><!-- Título: Explora más --></h2>
+    <div class="rutinas-grid">
+      <!-- Cajas de acceso a subpáginas -->
+      <a href="tema1.html" class="rutina-box">
+        <span class="emoji">📌</span>
+        <span><!-- Nombre del tema 1 --></span>
+      </a>
+      <!-- Duplica este bloque para más temas -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 <!-- Nombre del blog o proyecto --> | Proyecto educativo</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
